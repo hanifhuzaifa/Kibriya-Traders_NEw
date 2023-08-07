@@ -713,7 +713,7 @@ body {
 }
 
 .a1 {
-  /* display: none; */
+  display: none;
   transition: .3s;
 }
 

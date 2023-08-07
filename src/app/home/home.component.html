@@ -1,0 +1,729 @@
+<header class="header" id="myHeader">
+    <div class="logo">
+        <img style="margin-left: -55px;" src="../../assets/logo.png" alt="">
+    </div>
+    <nav class="navbarr" id="navbar">
+        <div class="logo hide-res-logo">
+            <img src="../../assets/Group 1.png" alt="">
+            <i class="fa fa-close" (click)="Close()"></i>
+        </div>
+        <div class="main-body-section d-flex">
+            <a class="active" routerLink="/home">Home</a>
+            <!-- <a href="">Online Store</a> -->
+            <div class="dropdown">
+                <a class="dropbtn">Online Store</a>
+                <div class="dropdown-content">
+                    <a href="#">B2B</a>
+                    <a href="#">B2C</a>
+                </div>
+            </div>
+
+            <a routerLink="/about">About</a>
+            <a routerLink="/order-process">Order Process</a>
+            <a routerLink="/product-range">Product Range</a>
+            <a routerLink="/contact">Contact Us</a>
+            <!-- <button class="btnn">Shop Now <i class="fa fa-angle-down"></i> </button> -->
+        </div>
+        <div class="icons">
+            <a href="https://www.instagram.com/kibriyatraders?igshid=MzRIODBiNWFIZA==" target="_blank">
+                <i class="fa fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61550001104414&mibextid=ZbWKwL" target="_blank">
+                <i class="fa fa-facebook-square"></i>
+            </a>
+            <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit" target="_blank">
+                <i class="fa fa-linkedin-square"></i>
+            </a>
+        </div>
+    </nav>
+    <i class="fa fa-bars" (click)="Open()"></i>
+</header>
+<div id="background-wrap">
+    <div class="bubble x1"></div>
+    <div class="bubble x2"></div>
+    <div class="bubble x3"></div>
+    <div class="bubble x4"></div>
+    <div class="bubble x5"></div>
+    <div class="bubble x6"></div>
+    <div class="bubble x7"></div>
+    <div class="bubble x8"></div>
+    <div class="bubble x9"></div>
+    <div class="bubble x10"></div>
+    <div class="bubble x11"></div>
+    <div class="bubble x12"></div>
+    <div class="bubble x13"></div>
+
+</div>
+<div class="main">
+    <div class="main-sub">
+        <div class="row">
+            <div class="col-lg-5 col-md-5" style="display: flex; align-items: center;">
+                <div class="headings">
+                    <h1>
+                        WE RESEARCH
+                        <br>
+                        WE FABRICATE
+                        <br>
+                        WE <span style="font-weight: 500; color: #007b5e;">PROVIDE</span>
+                    </h1>
+                    <p>We Provide A Full-service Solution For Your Company</p>
+                    <p>Bringing to you the best in manufacturing </p>
+                    <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="quote-btn"
+                        style="font-size: 17px;padding: 10px 28px;border-radius: 40px;">Get a
+                        quote</button>
+                    <!-- <img src="../LTtYhN.gif" alt=""> -->
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Get A Quote</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form [formGroup]="qoute" id="form">
+                                <!-- <label for="">Name</label> <br> -->
+                                <input class="modal-input" type="text" formControlName="Name" placeholder="Name" name="Name" id="Name">
+                                <br>
+                                <!-- <label for="">Email</label> <br> -->
+                                <input class="modal-input" type="email" formControlName="Email" placeholder="Email" name="Email" id="Email">
+                                <br>
+                                <!-- <label for="">Phone</label> <br> -->
+                                <input class="modal-input" type="number"  formControlName="Phone" placeholder="Phone" name="Phone" id="Phone">
+                                <br>
+                                <!-- <label for="">Shipping destination</label> <br> -->
+                                <textarea type="text" placeholder="Shipping destination"  formControlName="Shipping_Destination" name="Shipping_Destination"
+                                    id="Shipping_Destination"></textarea>
+
+                                <!-- <label for="">Type or product
+                                </label><br> -->
+                                <textarea type="text" placeholder="Type or product" formControlName="type_or_product"  name="Type_OR_Product"
+                                    id="Type_OR_Product"></textarea> <br>
+                                <!-- <label for="">Approx product qty</label> <br> -->
+                                <input class="modal-input" type="text" formControlName="approx_product_quantity" placeholder="Approx product qty"
+                                    id="Approx_Product_Quantity" name="Approx_Product_Quantity"> <br>
+                                <!-- <label for="">Other Notes
+                                </label><br> -->
+                                <textarea type="text" placeholder="Add URL or other similar product links" formControlName="url" id="url"
+                                    name="url"></textarea> <br>
+                                <div class="checkbox">
+                                    <h6>Are you selling this product already?</h6>
+                                    <input type="checkbox" name="Are_you_selling_this_product_already"
+                                        id="Are_you_selling_this_product_already" formControlName="Are_you_selling_this_product_already"> <br>
+                                </div>
+                                <div style="display: flex; justify-content: center; width: 100%;">
+                                    <button type="submit" class="quote-btn"
+                                        style="width: 150px; margin-top: 12px;" (click)="post()">SEND</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-7">
+                <!-- <img src="./" alt=""> -->
+                <!-- <img style="width: 100%; border-radius: 9px;" src="../ai.shipjpg.jpg" alt=""> -->
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner" style="border-radius: 9px;">
+                        <div class="carousel-item active" style="height: 375px;">
+                            <img src="../../assets/ai.shipjpg.jpg" class="d-block w-100" style="height: 100%;"
+                                alt="...">
+                        </div>
+                        <div class="carousel-item" style="height: 375px;">
+                            <img src="../../assets/s.jpg" class="d-block w-100" style="height: 100%;" alt="...">
+                        </div>
+                        <div class="carousel-item" style="height: 375px;">
+                            <img src="../../assets/ss.jpg" class="d-block w-100" style="height: 100%;" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main-2">
+    <div class="container">
+
+
+        <div class="row">
+            <div class="col-lg-7 col-md-12">
+                <div class="prag" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                    <h2>You're seeking for business,
+                        <span style="font-weight: 500; color: #07c7a4;">Right?</span>
+                    </h2>
+                    <p>
+                        We are sourcing for your desired products from all over the world, particularly from China
+                        and
+                        Pakistan, with product customization. <br>
+                        Are you looking to outsource your manufacturing without sacrificing either pricing or
+                        quality?
+                        You are therefore in the right position at this time since we will easily source and deliver
+                        your
+                        chosen product from the producer to your desired location. <br><br>
+                        <b> As an extension of your company, Kibriya Trader works for you to expand and scale.</b>
+                        We are happy to employ our services as an international sourcing firm to offer clear and
+                        affordable
+                        solutions from around the globe.
+                        We can acquire, manufacture, and ship anything you require. Our main area of competence is
+                        importing
+                        goods from China and other parts of Asia.
+
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-5" style="display: flex;align-items: center;justify-content: center;">
+                <img src="../../assets/IMVJCh.png" class="w-80" style="width: 100%;" alt="" data-aos="fade-left"
+                    data-aos-offset="300" data-aos-easing="ease-in-sine">
+            </div>
+            <div class="row" style="margin-top: 35px;padding-right: 0;">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up-right" data-aos-offset="200"
+                    data-aos-easing="ease-in-sine">
+                    <div class="card-con">
+                        <div class="card-icon">
+                            <i class="fa fa-laptop"></i>
+                        </div>
+                        <div class="card-text">
+                            <h4>Development</h4>
+                            <p>The Sourcing Co is a leader in product development, outsourcing and manufacturing
+                                services through
+                                our streamlined process and "factory-direct" approach that never compromises on
+                                quality.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine">
+                    <div class="card-con">
+                        <div class="card-icon">
+                            <img src="../../assets/implementation-9253462-7534267-unscreen.gif"
+                                style="width: 119px; filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(355deg) brightness(103%) contrast(102%);"
+                                alt="">
+                        </div>
+                        <div class="card-text">
+                            <h4>Expertise</h4>
+                            <p>With offices in different countries, we're well positioned to use our resources to
+                                deliver you high-quality products and exceptional service.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 ml-auto" data-aos="fade-up-left" data-aos-offset="200"
+                    data-aos-easing="ease-in-sine">
+                    <div class="card-con">
+                        <div class="card-icon">
+                            <i class="fa fa-globe"></i>
+                        </div>
+                        <div class="card-text">
+                            <h4>Global</h4>
+                            <p>We have a diverse team that have a deep understanding of the Asia-Pacific business
+                                environment, which we use to find the perfect manufacturing solution, within our
+                                vast network of partners.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="simple light-color" style="background-image: url(../../assets/bg.png);
+background-position: center;
+background-repeat: no-repeat;
+background-size: auto; padding-bottom: 0;">
+    <div class="container p-0" style="    position: relative;
+">
+        <div class="main-heading-grey">
+            <h1>Services & Resources:</h1>
+        </div>
+        <div class="row row-ml dn-off" style="margin: 43px;">
+            <div class="row">
+                <div class="col-lg-4 col-md-4" style="display: flex;align-items: center;justify-content: center;"
+                    data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine">
+                    <img src="../../assets/345-removebg-preview.png" alt="" style="width: 90%;">
+                </div>
+                <div class="col-lg-8 col-md-8" data-aos="fade-left" data-aos-offset="200"
+                    data-aos-easing="ease-in-sine">
+                    <div class="colls">
+                        <h2>Product Sourcing and Development</h2>
+                        <p>Kibriya Trader manages and oversees all aspects of the production process, from the
+                            concept
+                            and design stage to sampling and beyond.
+                            offers a full range of manufacturing services from beginning to end. We have strong
+                            relationships with the top Chinese manufacturers, so you won't have to sacrifice
+                            quality.
+                            The process of locating producers and suppliers for the goods a business offers is known
+                            as
+                            product sourcing. It's essential to the
+
+                            supply chain, and it can significantly affect a company's financial performance. The
+                            best
+                            method for sourcing a product will depend on the product and the market.
+                            <span class="a1" *ngIf="visible">There are a few
+                                various methods available. For instance, some businesses purchase things from buying
+                                agents,
+                                while others purchase products from local suppliers. Finding a dependable
+                                manufacturer
+                                who
+                                can deliver high-quality products at a reasonable cost is crucial. Companies can
+                                reduce
+                                costs and increase margins by using the correct product sourcing strategy.
+                                We'll be there for you every step of the way, from concept to production to product
+                                testing.
+                                Just let us know exactly what you require, and we'll take care of contacting our
+                                many
+                                product sourcing partners.
+                                We'll put you in touch with the ideal sourcing and manufacturing business to get you
+                                the
+                                greatest deal and guarantee that the quality is never compromised. As part of the
+                                development process, we give you prototypes and samples to ensure that your products
+                                meet
+                                industry requirements.
+                                We think that building long-lasting relationships with our clients and sourcing
+                                agents
+                                starts with trust.
+
+                                Looking at how e-commerce companies are expanding globally at an exponential rate
+
+                                A problem for a sourcing company is undoubtedly possible. The Kibriya Trader
+                                supports
+                                companies in selling their private label goods on e-commerce sites like Amazon and
+                                Shopify
+                                through its sourcing agent.
+                                Get complete control and transparency over the entire process; we work on your
+                                behalf to
+                                support the expansion of your e-commerce business. To learn how we can support the
+                                expansion
+                                of your company through product procurement for online sales, contact us right away.
+                                We can provide you a reliable Virtual Assistant for your Store to manage your
+                                business.</span>
+                        </p>
+                        <a class="kk" (click)="show()">Read more</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-md-8" style="margin-top: 25px;" data-aos="fade-right" data-aos-offset="200"
+                    data-aos-easing="ease-in-sine">
+                    <div class="colls">
+                        <h2>Product Development:</h2>
+                        <p>We'll be there for you every step of the way, from concept to production to product
+                            testing.
+                            Just let us know exactly what you require, and we'll take care of contacting our many
+                            product sourcing partners.
+                            We'll put you in touch with the ideal sourcing and manufacturing business to get you the
+                            greatest deal and guarantee that the quality is never compromised. As part of the
+                            development process, we give you prototypes and samples to ensure that your products
+                            meet
+                            industry requirements.
+                            We think that building long-lasting relationships with our clients and sourcing agents
+                            starts with trust.
+                            <span class="a1" *ngIf="visible">
+                                Finding a sourcing company can be difficult given the global e-commerce industry's
+                                exponential growth. With Kibriya Trader supports companies in selling their private
+                                label
+                                goods on e-commerce sites like Amazon and Shopify through its sourcing agents.
+                                Get complete control and transparency over the entire process; we work on your
+                                behalf to
+                                support the expansion of your e-commerce business. Talk to us right away to find out
+                                how
+                                we can support the expansion of your company's online store with product procurement.
+                                Procuring Products E-commerce Procuring Products Together, you and our committed
+                                product
+                                development team build a product from the ground up. We can help you with everything
+                                from
+                                industrial design to locating the ideal supplier who can not only produce your
+                                product
+                                but
+                                also do so at the most competitive price and level of quality. We'll take you
+                                through
+                                the
+                                design and production procedures, making certain that the product's usability and
+                                appearance
+                                are compatible.
+                                For further details on how we may assist you in creating a new product by utilizing
+                                our
+                                global manufacturers. <br>
+                                <b>Contact us at:</b> <a href="">info@Kibriyatrader.com</a>
+                            </span>
+                        </p>
+                        <a class="kk" (click)="show()">Read more</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4" style="display: flex;align-items: center;justify-content: center;"
+                    data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine">
+                    <img src="../../assets/5b6a322da3c79d7368b661a07c5f95ac-removebg-preview.png" alt="" style="width: 90%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-4" style="display: flex;align-items: center;justify-content: center;"
+                    data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine">
+                    <img src="../../assets/bggg-removebg-preview.png" style="width: 90%;    margin-top: -40px;" alt="">
+                </div>
+                <div class="col-lg-8 col-md-8" data-aos="fade-left" data-aos-offset="200"
+                    data-aos-easing="ease-in-sine">
+                    <div class="colls">
+                        <h2>Private Labelling:</h2>
+                        <p>The newest trend for Amazon sellers and e-commerce companies. Any product you can imagine
+                            for
+                            a private label, our manufacturers in China and Asia can make it! You can be confident
+                            that
+                            your branding, in conjunction with our in-house marketing team, will effectively display
+                            your goods to buyers. <br>
+                            <b>Product Hunting:</b>
+                            We will look for products that are in high demand to help you increase your personal
+                            revenue
+                            if you wish to sell them through Amazon or another E-Commerce site.
+
+                        </p>
+                        <!-- <a class="kk" onclick="show()">Read more</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-md-8" data-aos="fade-right" data-aos-offset="200"
+                    data-aos-easing="ease-in-sine">
+                    <div class="colls">
+                        <h2>Graphic Designing:</h2>
+                        <p>We separate out from other providers because to our in-house graphic design team and
+                            expertise of your clientele. Our designers have a proven track record of producing
+                            finished products by adhering to product briefs and style manuals.
+
+                        </p>
+                        <!-- <a class="kk" onclick="show()">Read more</a> -->
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4" style="display: flex;align-items: center;justify-content: center;"
+                    data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine">
+                    <img src="../../assets/cd276a7f774b7d35b296ded392269a46-removebg-preview.png"
+                        style="width: 90%;    margin-top: -40px;" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4" style="display: flex;align-items: center;justify-content: center;"
+                    data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine">
+                    <img src="../../assets/728e0c250ece9f7f19c42254d4f5add2-removebg-preview.png"
+                        style="width: 70%;    margin-top: -40px;" alt="">
+                </div>
+                <div class="col-lg-8 col-md-8" data-aos="fade-left" data-aos-offset="200"
+                    data-aos-easing="ease-in-sine">
+                    <div class="colls">
+                        <h2>Shipping & Logistics:</h2>
+                        <p>Our logistics team streamlines the entire shipment procedure. We take care of all the
+                            boring administrative procedures and provide all the goods you require. Airfreight, air
+                            cargo, LCL, and FCL are among the services. Additionally, we offer a gate-to-gate
+                            service. (from the manufacturer to the location you choose)
+                        </p>
+                        <!-- <a class="kk" onclick="show()">Read more</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-8 col-md-8" data-aos="fade-right" data-aos-offset="200"
+                    data-aos-easing="ease-in-sine">
+                    <div class="colls">
+                        <h2>Product Hunting & Sourcing</h2>
+                        <p>Finding the finest thing to market, sourcing it, and producing it Kibriya Trader manages
+                            and offers a full end-to-end manufacturing solution, handling everything from concept
+                            and design to sample and the production process.
+                        </p>
+                        <!-- <a class="kk" onclick="show()">Read more</a> -->
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4" style="display: flex;align-items: center;justify-content: center;"
+                    data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine">
+                    <img src="../../assets/fdd0a8b5efab96dc24b0562f79bca6f6-removebg-preview (1).png"
+                        style="width: 120%;    margin-top: -40px;" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row row-ml dn-on" style="margin: 43px;">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 img-none"
+                    style="display: flex;align-items: center;justify-content: center;" data-aos="fade-right"
+                    data-aos-offset="200" data-aos-easing="ease-in-sine">
+                    <img src="../../assets/345-removebg-preview.png" alt="" style="width: 90%;">
+                </div>
+                <div class="col-lg-8 col-md-8 pr-none" data-aos="fade-left" data-aos-offset="200"
+                    data-aos-easing="ease-in-sine">
+                    <div class="colls">
+                        <h2>Product Sourcing and Development</h2>
+                        <p>Kibriya Trader manages and oversees all aspects of the production process, from the
+                            concept
+                            and design stage to sampling and beyond.
+                            offers a full range of manufacturing services from beginning to end. We have strong
+                            relationships with the top Chinese manufacturers, so you won't have to sacrifice
+                            quality.
+                            The process of locating producers and suppliers for the goods a business offers is known
+                            as
+                            product sourcing. It's essential to the
+
+                            supply chain, and it can significantly affect a company's financial performance. The
+                            best
+                            method for sourcing a product will depend on the product and the market.
+                            <span class="a1" *ngIf="visible">There are a few
+                                various methods available. For instance, some businesses purchase things from buying
+                                agents,
+                                while others purchase products from local suppliers. Finding a dependable
+                                manufacturer
+                                who
+                                can deliver high-quality products at a reasonable cost is crucial. Companies can
+                                reduce
+                                costs and increase margins by using the correct product sourcing strategy.
+                                We'll be there for you every step of the way, from concept to production to product
+                                testing.
+                                Just let us know exactly what you require, and we'll take care of contacting our
+                                many
+                                product sourcing partners.
+                                We'll put you in touch with the ideal sourcing and manufacturing business to get you
+                                the
+                                greatest deal and guarantee that the quality is never compromised. As part of the
+                                development process, we give you prototypes and samples to ensure that your products
+                                meet
+                                industry requirements.
+                                We think that building long-lasting relationships with our clients and sourcing
+                                agents
+                                starts with trust.
+
+                                Looking at how e-commerce companies are expanding globally at an exponential rate
+
+                                A problem for a sourcing company is undoubtedly possible. The Kibriya Trader
+                                supports
+                                companies in selling their private label goods on e-commerce sites like Amazon and
+                                Shopify
+                                through its sourcing agent.
+                                Get complete control and transparency over the entire process; we work on your
+                                behalf to
+                                support the expansion of your e-commerce business. To learn how we can support the
+                                expansion
+                                of your company through product procurement for online sales, contact us right away.
+                                We can provide you a reliable Virtual Assistant for your Store to manage your
+                                business.</span>
+                        </p>
+                        <a class="kk" (click)="show()">Read more</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row" style="    margin-top: -19px;">
+                <div class="col-lg-4 col-md-4 img-none"
+                    style="display: flex;align-items: center;justify-content: center;" data-aos="fade-left"
+                    data-aos-offset="200" data-aos-easing="ease-in-sine">
+                    <img src="../../assets/5b6a322da3c79d7368b661a07c5f95ac-removebg-preview.png" alt="" style="width: 90%;">
+                </div>
+                <div class="col-lg-8 col-md-8 pr-none" style="margin-top: 25px;" data-aos="fade-right"
+                    data-aos-offset="200" data-aos-easing="ease-in-sine">
+                    <div class="colls">
+                        <h2>Product Development:</h2>
+                        <p>We'll be there for you every step of the way, from concept to production to product
+                            testing.
+                            Just let us know exactly what you require, and we'll take care of contacting our many
+                            product sourcing partners.
+                            We'll put you in touch with the ideal sourcing and manufacturing business to get you the
+                            greatest deal and guarantee that the quality is never compromised. As part of the
+                            development process, we give you prototypes and samples to ensure that your products
+                            meet
+                            industry requirements.
+                            We think that building long-lasting relationships with our clients and sourcing agents
+                            starts with trust.
+
+
+                            <span class="a1" *ngIf="visible">
+                                Finding a sourcing company can be difficult given the global e-commerce industry's
+                                exponential growth. With Kibriya Trader supports companies in selling their private
+                                label
+                                goods on e-commerce sites like Amazon and Shopify through its sourcing agents.
+                                Get complete control and transparency over the entire process; we work on your
+                                behalf to
+                                support the expansion of your e-commerce business. Talk to us right away to find out
+                                how
+                                we
+                                can support the expansion of your company's online store with product procurement.
+                                Procuring Products E-commerce Procuring Products Together, you and our committed
+                                product
+                                development team build a product from the ground up. We can help you with everything
+                                from
+                                industrial design to locating the ideal supplier who can not only produce your
+                                product
+                                but
+                                also do so at the most competitive price and level of quality. We'll take you
+                                through
+                                the
+                                design and production procedures, making certain that the product's usability and
+                                appearance
+                                are compatible.
+                                For further details on how we may assist you in creating a new product by utilizing
+                                our
+                                global manufacturers. <br>
+                                <b>Contact us at:</b> <a href="">info@Kibriyatrader.com</a>
+                            </span>
+                        </p>
+                        <a class="kk" (click)="show()">Read more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 img-none"
+                    style="display: flex;align-items: center;justify-content: center;" data-aos="fade-right"
+                    data-aos-offset="200" data-aos-easing="ease-in-sine">
+                    <img src="../../assets/bggg-removebg-preview.png" style="width: 90%;    margin-top: -40px;" alt="">
+                </div>
+                <div class="col-lg-8 col-md-8 pr-none" data-aos="fade-left" data-aos-offset="200"
+                    data-aos-easing="ease-in-sine">
+                    <div class="colls">
+                        <h2>Private Labelling:</h2>
+                        <p>The newest trend for Amazon sellers and e-commerce companies. Any product you can imagine
+                            for
+                            a private label, our manufacturers in China and Asia can make it! You can be confident
+                            that
+                            your branding, in conjunction with our in-house marketing team, will effectively display
+                            your goods to buyers. <br>
+                            <b>Product Hunting:</b>
+                            We will look for products that are in high demand to help you increase your personal
+                            revenue
+                            if you wish to sell them through Amazon or another E-Commerce site.
+
+                        </p>
+                        <!-- <a class="kk" onclick="show()">Read more</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-bottom: 30px;">
+                <div class="col-lg-4 col-md-4 img-none"
+                    style="display: flex;align-items: center;justify-content: center;" data-aos="fade-right"
+                    data-aos-offset="200" data-aos-easing="ease-in-sine">
+                    <img src="../../assets/cd276a7f774b7d35b296ded392269a46-removebg-preview.png"
+                        style="width: 90%;    margin-top: -40px;" alt="">
+                </div>
+                <div class="col-lg-8 col-md-8 pr-none" data-aos="fade-left" data-aos-offset="200"
+                    data-aos-easing="ease-in-sine">
+                    <div class="colls">
+                        <h2>Graphic Designing:</h2>
+                        <p>We separate out from other providers because to our in-house graphic design team and
+                            expertise of your clientele. Our designers have a proven track record of producing finished
+                            products by adhering to product briefs and style manuals.
+
+                        </p>
+                        <!-- <a class="kk" onclick="show()">Read more</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-bottom: 30px;">
+                <div class="col-lg-4 col-md-4 img-none"
+                    style="display: flex;align-items: center;justify-content: center;" data-aos="fade-right"
+                    data-aos-offset="200" data-aos-easing="ease-in-sine">
+                    <img src="../../assets/728e0c250ece9f7f19c42254d4f5add2-removebg-preview.png"
+                        style="width: 90%;    margin-top: -40px;" alt="">
+                </div>
+                <div class="col-lg-8 col-md-8 pr-none" data-aos="fade-left" data-aos-offset="200"
+                    data-aos-easing="ease-in-sine">
+                    <div class="colls">
+                        <h2>Shipping & Logistics:</h2>
+                        <p>Our logistics team streamlines the entire shipment procedure. We take care of all the boring
+                            administrative procedures and provide all the goods you require. Airfreight, air cargo, LCL,
+                            and FCL are among the services. Additionally, we offer a gate-to-gate service. (from the
+                            manufacturer to the location you choose)
+
+                        </p>
+                        <!-- <a class="kk" onclick="show()">Read more</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 img-none"
+                    style="display: flex;align-items: center;justify-content: center;" data-aos="fade-right"
+                    data-aos-offset="200" data-aos-easing="ease-in-sine">
+                    <img src="../../assets/fdd0a8b5efab96dc24b0562f79bca6f6-removebg-preview (1).png"
+                        style="width: 90%;    margin-top: -40px;" alt="">
+                </div>
+                <div class="col-lg-8 col-md-8 pr-none" data-aos="fade-left" data-aos-offset="200"
+                    data-aos-easing="ease-in-sine">
+                    <div class="colls">
+                        <h2>Product Hunting & Sourcing</h2>
+                        <p>Finding the finest thing to market, sourcing it, and producing it Kibriya Trader manages and
+                            offers a full end-to-end manufacturing solution, handling everything from concept and design
+                            to sample and the production process.
+
+                        </p>
+                        <!-- <a class="kk" onclick="show()">Read more</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<section id="footer">
+    <div class="container">
+        <div class="row text-center text-xs-center text-sm-left text-md-left">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <h5>Contact Info</h5>
+                <div class="divv" style="margin-top: 14px;">
+                    <div class="row">
+                        <div class="col-lg-3 curtext">Address: </div>
+                        <div class="col-lg-9 curtext">Building # R-103, Gawaliyor Society, Scheme 33, Karachi.</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 curtext">Pst.Code: </div>
+                        <div class="col-lg-9 curtext">75850</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 curtext">E-Mail: </div>
+                        <div class="col-lg-9 curtext"><a href="">info@kibriyatrader.com</a></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 curtext">Call Us: </div>
+                        <div class="col-lg-9 curtext"><a href="">03310330273</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <h5>Quick links</h5>
+                <ul class="list-unstyled quick-links">
+                    <li><a routerLink="/home"><i class="fa fa-angle-double-right"></i>Home</a></li>
+                    <li><a routerLink="#"><i class="fa fa-angle-double-right"></i>Online Store</a></li>
+                    <li><a routerLink="/about"><i class="fa fa-angle-double-right"></i>About</a></li>
+                    <li><a routerLink="/order-process"><i class="fa fa-angle-double-right"></i>Order Process</a></li>
+                    <li><a routerLink="/product-range"><i class="fa fa-angle-double-right"></i>Product Range</a></li>
+                    <li><a routerLink="/contact"><i class="fa fa-angle-double-right"></i>Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <h5>Social Links</h5>
+                <ul class="list-unstyled quick-links">
+                    <li><a href="https://www.facebook.com/profile.php?id=61550001104414&mibextid=ZbWKwL"
+                            target="_blank"><i class="fa fa-angle-double-right"></i>Facebook</a></li>
+                    <li><a href="https://www.instagram.com/kibriyatraders?igshid=MzRIODBiNWFIZA==" target="_blank"><i
+                                class="fa fa-angle-double-right"></i>Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit"
+                            target="_blank"><i class="fa fa-angle-double-right"></i>Linked In</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
