@@ -8,9 +8,11 @@ import { AboutComponent } from './about/about.component';
 import { OrderProcessComponent } from './order-process/order-process.component';
 import { ProductRangComponent } from './product-rang/product-rang.component';
 import { ContactComponent } from './contact/contact.component';
-import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 import {ReactiveFormsModule} from '@angular/forms';
+import { LoginComponent } from './New folder/login/login.component';
+import { DataComponent } from './New folder/data/data.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import {ReactiveFormsModule} from '@angular/forms';
     AboutComponent,
     OrderProcessComponent,
     ProductRangComponent,
-    ContactComponent
+    ContactComponent,
+    LoginComponent,
+    DataComponent
     
   ],
   imports: [

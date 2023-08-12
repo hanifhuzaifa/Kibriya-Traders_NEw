@@ -12,10 +12,10 @@
             <!-- <a href="">Online Store</a> -->
             <div class="dropdown">
                 <a class="dropbtn">Online Store</a>
-                    <div class="dropdown-content">
-                        <a href="#">B2B</a>
-                        <a href="#">B2C</a>
-                    </div>
+                <div class="dropdown-content">
+                    <a href="#">B2B</a>
+                    <a href="#">B2C</a>
+                </div>
             </div>
 
             <a routerLink="/about">About</a>
@@ -64,127 +64,18 @@
                 knowledge.</p>
         </div>
         <div class="row" style="margin-top: 22px; margin-bottom: 22px;">
-            <div class="col-lg-3 col-md-6 col-sm-6 col-6" title="Food & Grocery">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-6" title="Food & Grocery" *ngFor="let x of card">
                 <div class="containerrr">
-                    <img src="../../assets/food.jpg" alt="Avatar" class="image" style="width:100%">
+                    <img src="{{x.img}}" alt="Avatar" class="image" style="width:100%">
+                    <h4>{{x.h4}}</h4>
                     <div class="middle">
-                        <div class="text">
-                            <button class="btn btn-light">View Range</button>
+                        <div class="text" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+                            <button class="btn btn-light">{{x.button}}</button>
                         </div>
-                        <h4>Food & Grocery</h4>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-6" title="Electronic">
-                <div class="containerrr">
-                    <img src="../../assets/electronicsjpg.jpg" alt="Avatar" class="image" style="width:100%">
-                    <div class="middle">
-                        <div class="text">
-                            <button class="btn btn-light">View Range</button>
-                        </div>
-                        <h4>Electronic</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-6" title="Gym & Fitness">
-                <div class="containerrr">
-                    <img src="../../assets/لپعjpg.jpg" alt="Avatar" class="image" style="width:100%">
-                    <div class="middle">
-                        <div class="text">
-                            <button class="btn btn-light">View Range</button>
-                        </div>
-                        <h4>Gym & Fitness</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-6" title="Coporate Gifts">
-                <div class="containerrr">
-                    <img src="../../assets/لبنٹjpg.jpg" alt="Avatar" class="image" style="width:100%">
-                    <div class="middle">
-                        <div class="text">
-                            <button class="btn btn-light">View Range</button>
-                        </div>
-                        <h4>Coporate Gifts</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-6" title="Coporate Gifts">
-                <div class="containerrr">
-                    <img src="../../assets/Household appliances.jpg" alt="Avatar" class="image" style="width:100%">
-                    <div class="middle">
-                        <div class="text">
-                            <button class="btn btn-light">View Range</button>
-                        </div>
-                        <h4>Household appliances.</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-6" title="Coporate Gifts">
-                <div class="containerrr">
-                    <img src="../../assets/dryfruitsjpg.jpg" alt="Avatar" class="image" style="width:100%">
-                    <div class="middle">
-                        <div class="text">
-                            <button class="btn btn-light">View Range</button>
-                        </div>
-                        <h4>Dry Fruits</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-6" title="Coporate Gifts">
-                <div class="containerrr">
-                    <img src="../../assets/Kitchen fitouts.jpg" alt="Avatar" class="image" style="width:100%">
-                    <div class="middle">
-                        <div class="text">
-                            <button class="btn btn-light">View Range</button>
-                        </div>
-                        <h4>Kitchen fitouts.</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-6" title="Coporate Gifts">
-                <div class="containerrr">
-                    <img src="../../assets/foodpkgjpg.jpg" alt="Avatar" class="image" style="width:100%">
-                    <div class="middle">
-                        <div class="text">
-                            <button class="btn btn-light">View Range</button>
-                        </div>
-                        <h4>Food packaging.</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-6" title="Coporate Gifts">
-                <div class="containerrr">
-                    <img src="../../assets/toolsjpg.jpg" alt="Avatar" class="image" style="width:100%">
-                    <div class="middle">
-                        <div class="text">
-                            <button class="btn btn-light">View Range</button>
-                        </div>
-                        <h4>Hardware and tools.</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-6" title="Coporate Gifts">
-                <div class="containerrr">
-                    <img src="../../assets/bedjpg.jpg" alt="Avatar" class="image" style="width:100%">
-                    <div class="middle">
-                        <div class="text">
-                            <button class="btn btn-light">View Range</button>
-                        </div>
-                        <h4>Bedding and Home decoration.</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-6" title="Coporate Gifts">
-                <div class="containerrr">
-                    <img src="../../assets/stationaryjpg.jpg" alt="Avatar" class="image" style="width:100%">
-                    <div class="middle">
-                        <div class="text">
-                            <button class="btn btn-light">View Range</button>
-                        </div>
-                        <h4>Stationary and office supplies.</h4>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
 </div>
@@ -198,7 +89,7 @@
     <div class="container">
         <div class="row text-center text-xs-center text-sm-left text-md-left">
             <div class="col-xs-12 col-sm-4 col-md-4">
-                <h5 >Contact Info</h5>
+                <h5>Contact Info</h5>
                 <div class="divv" style="margin-top: 14px;">
                     <div class="row">
                         <div class="col-lg-3 curtext">Address: </div>
@@ -219,9 +110,8 @@
                 </div>
             </div>
             <div class="col-xs-12 col-sm-4 col-md-4">
-                <h5 >Quick links</h5>
-                <ul 
-                    class="list-unstyled quick-links">
+                <h5>Quick links</h5>
+                <ul class="list-unstyled quick-links">
                     <li><a routerLink="/home"><i class="fa fa-angle-double-right"></i>Home</a></li>
                     <li><a routerLink="#"><i class="fa fa-angle-double-right"></i>Online Store</a></li>
                     <li><a routerLink="/about"><i class="fa fa-angle-double-right"></i>About</a></li>
@@ -235,8 +125,8 @@
                 <ul class="list-unstyled quick-links">
                     <li><a href="https://www.facebook.com/profile.php?id=61550001104414&mibextid=ZbWKwL"
                             target="_blank"><i class="fa fa-angle-double-right"></i>Facebook</a></li>
-                    <li><a href="https://www.instagram.com/kibriyatraders?igshid=MzRIODBiNWFIZA=="
-                            target="_blank"><i class="fa fa-angle-double-right"></i>Instagram</a></li>
+                    <li><a href="https://www.instagram.com/kibriyatraders?igshid=MzRIODBiNWFIZA==" target="_blank"><i
+                                class="fa fa-angle-double-right"></i>Instagram</a></li>
                     <li><a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit"
                             target="_blank"><i class="fa fa-angle-double-right"></i>Linked In</a></li>
                 </ul>
@@ -244,3 +134,184 @@
         </div>
     </div>
 </section>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Get A Quote</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="qoute" id="form">
+
+                <input class="modal-input" type="text" formControlName="Name" placeholder="Name"
+                    name="Name" id="Name">
+                <br>
+
+                <input class="modal-input" type="email" formControlName="Email" placeholder="Email"
+                    name="Email" id="Email">
+                <br>
+                <input class="modal-input" type="number" formControlName="Phone" placeholder="Phone"
+                    name="Phone" id="Phone">
+                <br>
+                <textarea type="text" placeholder="Shipping destination"
+                    formControlName="Shipping_Destination" name="Shipping_Destination"
+                    id="Shipping_Destination"></textarea>
+
+
+                <textarea type="text" placeholder="Type or product" formControlName="type_or_product"
+                    name="Type_OR_Product" id="Type_OR_Product"></textarea> <br>
+                <input class="modal-input" type="text" formControlName="approx_product_quantity"
+                    placeholder="Approx product qty" id="Approx_Product_Quantity"
+                    name="Approx_Product_Quantity"> <br>
+
+                <textarea type="text" placeholder="Add URL or other similar product links"
+                    formControlName="url" id="url" name="url"></textarea> <br>
+                <div class="checkbox">
+                    <h6>Are you selling this product already?</h6>
+                    <input type="checkbox" name="Are_you_selling_this_product_already"
+                        id="Are_you_selling_this_product_already"
+                        formControlName="Are_you_selling_this_product_already"> <br>
+                </div>
+                <div style="display: flex; justify-content: center; width: 100%;">
+                    <button type="submit" class="quote-btn" style="width: 150px; margin-top: 12px;"
+                        (click)="post()">SEND</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+<!-- .. -->
+<!-- <div class="row" style="margin-top: 22px; margin-bottom: 22px;">
+    <div class="col-lg-3 col-md-6 col-sm-6 col-6" title="Food & Grocery">
+        <div class="containerrr">
+            <img src="../../assets/food.jpg" alt="Avatar" class="image" style="width:100%">
+            <div class="middle">
+                <div class="text">
+                    <button class="btn btn-light">View Range</button>
+                </div>
+                <h4>Food & Grocery</h4>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6 col-6" title="Electronic">
+        <div class="containerrr">
+            <img src="../../assets/electronicsjpg.jpg" alt="Avatar" class="image" style="width:100%">
+            <div class="middle">
+                <div class="text">
+                    <button class="btn btn-light">View Range</button>
+                </div>
+                <h4>Electronic</h4>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6 col-6" title="Gym & Fitness">
+        <div class="containerrr">
+            <img src="../../assets/لپعjpg.jpg" alt="Avatar" class="image" style="width:100%">
+            <div class="middle">
+                <div class="text">
+                    <button class="btn btn-light">View Range</button>
+                </div>
+                <h4>Gym & Fitness</h4>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6 col-6" title="Coporate Gifts">
+        <div class="containerrr">
+            <img src="../../assets/لبنٹjpg.jpg" alt="Avatar" class="image" style="width:100%">
+            <div class="middle">
+                <div class="text">
+                    <button class="btn btn-light">View Range</button>
+                </div>
+                <h4>Coporate Gifts</h4>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6 col-6" title="Coporate Gifts">
+        <div class="containerrr">
+            <img src="../../assets/Household appliances.jpg" alt="Avatar" class="image" style="width:100%">
+            <div class="middle">
+                <div class="text">
+                    <button class="btn btn-light">View Range</button>
+                </div>
+                <h4>Household appliances.</h4>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6 col-6" title="Coporate Gifts">
+        <div class="containerrr">
+            <img src="../../assets/dryfruitsjpg.jpg" alt="Avatar" class="image" style="width:100%">
+            <div class="middle">
+                <div class="text">
+                    <button class="btn btn-light">View Range</button>
+                </div>
+                <h4>Dry Fruits</h4>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6 col-6" title="Coporate Gifts">
+        <div class="containerrr">
+            <img src="../../assets/Kitchen fitouts.jpg" alt="Avatar" class="image" style="width:100%">
+            <div class="middle">
+                <div class="text">
+                    <button class="btn btn-light">View Range</button>
+                </div>
+                <h4>Kitchen fitouts.</h4>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6 col-6" title="Coporate Gifts">
+        <div class="containerrr">
+            <img src="../../assets/foodpkgjpg.jpg" alt="Avatar" class="image" style="width:100%">
+            <div class="middle">
+                <div class="text">
+                    <button class="btn btn-light">View Range</button>
+                </div>
+                <h4>Food packaging.</h4>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6 col-6" title="Coporate Gifts">
+        <div class="containerrr">
+            <img src="../../assets/toolsjpg.jpg" alt="Avatar" class="image" style="width:100%">
+            <div class="middle">
+                <div class="text">
+                    <button class="btn btn-light">View Range</button>
+                </div>
+                <h4>Hardware and tools.</h4>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6 col-6" title="Coporate Gifts">
+        <div class="containerrr">
+            <img src="../../assets/bedjpg.jpg" alt="Avatar" class="image" style="width:100%">
+            <div class="middle">
+                <div class="text">
+                    <button class="btn btn-light">View Range</button>
+                </div>
+                <h4>Bedding and Home decoration.</h4>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6 col-6" title="Coporate Gifts">
+        <div class="containerrr">
+            <img src="../../assets/stationaryjpg.jpg" alt="Avatar" class="image" style="width:100%">
+            <div class="middle">
+                <div class="text">
+                    <button class="btn btn-light">View Range</button>
+                </div>
+                <h4>Stationary and office supplies.</h4>
+            </div>
+        </div>
+    </div>
+</div> -->

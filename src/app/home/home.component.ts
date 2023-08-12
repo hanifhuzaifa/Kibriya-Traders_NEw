@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import * as Aos from 'aos';
 import { FormGroup,FormControl } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     Aos.init();
   }
-
+count : any
 //  show(e: any = HTMLElement) {
 //     const nextSib = e.previousElementSibling.lastElementChild as HTMLElement;
 //     if (nextSib.className === "a1") {
@@ -46,9 +46,19 @@ send(){
 
 }
 
+@HostListener('document:click', ['$event'])
+onClick(event: MouseEvent): void {
+  var navbar = document.getElementById('navbar');
+  if((event.target as HTMLElement).id === 'menuicon') {
+  } else {
+    this.Close();
+  }
+}
+
 Open() {
   var navbar = document.getElementById('navbar');
   navbar?.classList.add('open')
+  this.count = true
 }
 
 Close() {
@@ -60,13 +70,13 @@ Close() {
 
 post(){
   const obj= this.qoute.value;
-  this.http.post("https://localhost:44389/api/Controller/SaveQoute/obj",obj).subscribe((res:any)=>{
+  this.http.post("https://kibtradapi.somee.com/api/Controller/SaveQoute/obj",obj).subscribe((res:any)=>{
     alert("Your Qoute is Sent Successfully... We Will Get touch with you soon")
     this.qoute.reset();
   })
 }
 get(){
-  this.http.get("https://localhost:44389/api/Controller/GetQoutes").subscribe((res:any)=>{
+  this.http.get("https://kibtradapi.somee.com/api/Controller/GetQoutes").subscribe((res:any)=>{
 
   })
 }

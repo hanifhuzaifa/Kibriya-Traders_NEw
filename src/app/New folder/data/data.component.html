@@ -1,0 +1,61 @@
+<div class="container">
+    <nav class="tabs">
+      <div class="tab" [class.active]="activeTab === 1" (click)="setActiveTab(1)">Contact</div>
+      <div class="tab" [class.active]="activeTab === 2" (click)="setActiveTab(2)">Qoute</div>
+    </nav>
+    <div class="content">
+      <div *ngIf="activeTab === 1">
+        <table style="    font-size: 13px;" class="table table-dark table-borderless">
+            <thead>
+                <tr>
+                  <th scope="col">SR.No</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">EMail</th>
+                  <th scope="col">Phone</th>
+                  <th scope="col">Subject</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of contactdata; let i = index">
+                  <th scope="row">{{i + 1}}</th>
+                  <td>{{item.name}}</td>
+                  <td>{{item.email}}</td>
+                  <td>{{item.phonenumber}}</td>
+                  <td>{{item.subject}}</td>
+                </tr>
+              </tbody>
+        </table>
+      </div>
+      <div *ngIf="activeTab === 2">
+        <table style="    font-size: 13px;" class="table table-dark table-borderless">
+            <thead>
+                <tr>
+                  <th scope="col">SR.No</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Phone</th>
+                  <th scope="col">Ship.Destination</th>
+                  <th scope="col">Type/Product</th>
+                  <th scope="col">Apprx.Quantity</th>
+                  <th scope="col">url</th>
+                  <th scope="col">Already Sale</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of qoutesData; let i = index;">
+                  <th scope="row">{{i + 1}}</th>
+                  <td>{{item.Name}}</td>
+                  <td>{{item.Email}}</td>
+                  <td>{{item.Phone}}</td>
+                  <td>{{item.Shipping_Destination}}</td>
+                  <td>{{item.type_or_product}}</td>
+                  <td>{{item.approx_product_quantity}}</td>
+                  <td>{{item.url}}</td>
+                  <td>{{item.Are_you_selling_this_product_already}}</td>
+                </tr>
+              </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  

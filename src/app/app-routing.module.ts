@@ -5,6 +5,8 @@ import { AboutComponent } from './about/about.component';
 import { OrderProcessComponent } from './order-process/order-process.component';
 import { ProductRangComponent } from './product-rang/product-rang.component';
 import { ContactComponent } from './contact/contact.component';
+import { LoginComponent } from './New folder/login/login.component';
+import { DataComponent } from './New folder/data/data.component';
 
 const routes: Routes = [
   {
@@ -31,6 +33,19 @@ const routes: Routes = [
   {
     path: 'contact',
     component: ContactComponent
+  },
+  {
+    path:"data",
+    children:[
+      {
+        path:"login",
+        component:LoginComponent
+      },
+      {
+        path:"data",
+        component:DataComponent
+      }
+    ]
   }
 ];
 

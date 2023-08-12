@@ -34,9 +34,10 @@
             <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit" target="_blank">
                 <i class="fa fa-linkedin-square"></i>
             </a>
+
         </div>
     </nav>
-    <i class="fa fa-bars" (click)="Open()"></i>
+    <i class="fa fa-bars" id="menuicon" (click)="Open()"></i>
 </header>
 <div id="background-wrap">
     <div class="bubble x1"></div>
@@ -67,15 +68,14 @@
                         WE <span style="font-weight: 500; color: #007b5e;">PROVIDE</span>
                     </h1>
                     <p>We Provide A Full-service Solution For Your Company</p>
-                    <p>Bringing to you the best in manufacturing </p>
+                    <p>Bringing to you the best in manufacturing</p>
                     <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="quote-btn"
                         style="font-size: 17px;padding: 10px 28px;border-radius: 40px;">Get a
                         quote</button>
-                    <!-- <img src="../LTtYhN.gif" alt=""> -->
+
                 </div>
             </div>
 
-            <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog">
@@ -86,38 +86,39 @@
                         </div>
                         <div class="modal-body">
                             <form [formGroup]="qoute" id="form">
-                                <!-- <label for="">Name</label> <br> -->
-                                <input class="modal-input" type="text" formControlName="Name" placeholder="Name" name="Name" id="Name">
+
+                                <input class="modal-input" type="text" formControlName="Name" placeholder="Name"
+                                    name="Name" id="Name">
                                 <br>
-                                <!-- <label for="">Email</label> <br> -->
-                                <input class="modal-input" type="email" formControlName="Email" placeholder="Email" name="Email" id="Email">
+
+                                <input class="modal-input" type="email" formControlName="Email" placeholder="Email"
+                                    name="Email" id="Email">
                                 <br>
-                                <!-- <label for="">Phone</label> <br> -->
-                                <input class="modal-input" type="number"  formControlName="Phone" placeholder="Phone" name="Phone" id="Phone">
+                                <input class="modal-input" type="number" formControlName="Phone" placeholder="Phone"
+                                    name="Phone" id="Phone">
                                 <br>
-                                <!-- <label for="">Shipping destination</label> <br> -->
-                                <textarea type="text" placeholder="Shipping destination"  formControlName="Shipping_Destination" name="Shipping_Destination"
+                                <textarea type="text" placeholder="Shipping destination"
+                                    formControlName="Shipping_Destination" name="Shipping_Destination"
                                     id="Shipping_Destination"></textarea>
 
-                                <!-- <label for="">Type or product
-                                </label><br> -->
-                                <textarea type="text" placeholder="Type or product" formControlName="type_or_product"  name="Type_OR_Product"
-                                    id="Type_OR_Product"></textarea> <br>
-                                <!-- <label for="">Approx product qty</label> <br> -->
-                                <input class="modal-input" type="text" formControlName="approx_product_quantity" placeholder="Approx product qty"
-                                    id="Approx_Product_Quantity" name="Approx_Product_Quantity"> <br>
-                                <!-- <label for="">Other Notes
-                                </label><br> -->
-                                <textarea type="text" placeholder="Add URL or other similar product links" formControlName="url" id="url"
-                                    name="url"></textarea> <br>
+
+                                <textarea type="text" placeholder="Type or product" formControlName="type_or_product"
+                                    name="Type_OR_Product" id="Type_OR_Product"></textarea> <br>
+                                <input class="modal-input" type="text" formControlName="approx_product_quantity"
+                                    placeholder="Approx product qty" id="Approx_Product_Quantity"
+                                    name="Approx_Product_Quantity"> <br>
+
+                                <textarea type="text" placeholder="Add URL or other similar product links"
+                                    formControlName="url" id="url" name="url"></textarea> <br>
                                 <div class="checkbox">
                                     <h6>Are you selling this product already?</h6>
                                     <input type="checkbox" name="Are_you_selling_this_product_already"
-                                        id="Are_you_selling_this_product_already" formControlName="Are_you_selling_this_product_already"> <br>
+                                        id="Are_you_selling_this_product_already"
+                                        formControlName="Are_you_selling_this_product_already"> <br>
                                 </div>
                                 <div style="display: flex; justify-content: center; width: 100%;">
-                                    <button type="submit" class="quote-btn"
-                                        style="width: 150px; margin-top: 12px;" (click)="post()">SEND</button>
+                                    <button type="submit" class="quote-btn" style="width: 150px; margin-top: 12px;"
+                                        (click)="post()">SEND</button>
                                 </div>
                             </form>
                         </div>
@@ -125,8 +126,7 @@
                 </div>
             </div>
             <div class="col-lg-7 col-md-7">
-                <!-- <img src="./" alt=""> -->
-                <!-- <img style="width: 100%; border-radius: 9px;" src="../ai.shipjpg.jpg" alt=""> -->
+
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
@@ -138,14 +138,14 @@
                     </div>
                     <div class="carousel-inner" style="border-radius: 9px;">
                         <div class="carousel-item active" style="height: 375px;">
-                            <img src="../../assets/ai.shipjpg.jpg" class="d-block w-100" style="height: 100%;"
+                            <img src="../../assets/shipcargo.jpg" class="d-block w-100" style="height: 100%;"
                                 alt="...">
                         </div>
                         <div class="carousel-item" style="height: 375px;">
-                            <img src="../../assets/s.jpg" class="d-block w-100" style="height: 100%;" alt="...">
+                            <img src="../../assets/ai.shipjpg.jpg" class="d-block w-100" style="height: 100%;" alt="...">
                         </div>
                         <div class="carousel-item" style="height: 375px;">
-                            <img src="../../assets/ss.jpg" class="d-block w-100" style="height: 100%;" alt="...">
+                            <img src="../../assets/shipcargo2.jpg" class="d-block w-100" style="height: 100%;" alt="...">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -163,13 +163,11 @@
         </div>
     </div>
 </div>
-<div class="main-2">
+<div class="main-2" >
     <div class="container">
-
-
         <div class="row">
             <div class="col-lg-7 col-md-12">
-                <div class="prag" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <div class="prag" >
                     <h2>You're seeking for business,
                         <span style="font-weight: 500; color: #07c7a4;">Right?</span>
                     </h2>
@@ -194,8 +192,7 @@
                 </div>
             </div>
             <div class="col-lg-5" style="display: flex;align-items: center;justify-content: center;">
-                <img src="../../assets/IMVJCh.png" class="w-80" style="width: 100%;" alt="" data-aos="fade-left"
-                    data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <img src="../../assets/IMVJCh.png" class="w-80" style="width: 100%;" alt="" >
             </div>
             <div class="row" style="margin-top: 35px;padding-right: 0;">
                 <div class="col-lg-4 col-md-6" data-aos="fade-up-right" data-aos-offset="200"
@@ -206,7 +203,7 @@
                         </div>
                         <div class="card-text">
                             <h4>Development</h4>
-                            <p>The Sourcing Co is a leader in product development, outsourcing and manufacturing
+                            <p>The Kibriya Traders is a leader in product development, outsourcing and manufacturing
                                 services through
                                 our streamlined process and "factory-direct" approach that never compromises on
                                 quality.</p>
@@ -247,11 +244,8 @@
     </div>
 </div>
 <div class="simple light-color" style="background-image: url(../../assets/bg.png);
-background-position: center;
-background-repeat: no-repeat;
-background-size: auto; padding-bottom: 0;">
-    <div class="container p-0" style="    position: relative;
-">
+        background-position: center; background-repeat: no-repeat; background-size: auto; padding-bottom: 0;overflow-x: hidden;">
+    <div class="container p-0" style=" position: relative;">
         <div class="main-heading-grey">
             <h1>Services & Resources:</h1>
         </div>
@@ -301,9 +295,7 @@ background-size: auto; padding-bottom: 0;">
                                 We think that building long-lasting relationships with our clients and sourcing
                                 agents
                                 starts with trust.
-
                                 Looking at how e-commerce companies are expanding globally at an exponential rate
-
                                 A problem for a sourcing company is undoubtedly possible. The Kibriya Trader
                                 supports
                                 companies in selling their private label goods on e-commerce sites like Amazon and
@@ -372,7 +364,8 @@ background-size: auto; padding-bottom: 0;">
                 </div>
                 <div class="col-lg-4 col-md-4" style="display: flex;align-items: center;justify-content: center;"
                     data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine">
-                    <img src="../../assets/5b6a322da3c79d7368b661a07c5f95ac-removebg-preview.png" alt="" style="width: 90%;">
+                    <img src="../../assets/5b6a322da3c79d7368b661a07c5f95ac-removebg-preview.png" alt=""
+                        style="width: 90%;">
                 </div>
             </div>
 
@@ -397,7 +390,6 @@ background-size: auto; padding-bottom: 0;">
                             if you wish to sell them through Amazon or another E-Commerce site.
 
                         </p>
-                        <!-- <a class="kk" onclick="show()">Read more</a> -->
                     </div>
                 </div>
             </div>
@@ -405,13 +397,12 @@ background-size: auto; padding-bottom: 0;">
                 <div class="col-lg-8 col-md-8" data-aos="fade-right" data-aos-offset="200"
                     data-aos-easing="ease-in-sine">
                     <div class="colls">
-                        <h2>Graphic Designing:</h2>
+                        <h2>Graphic Designing</h2>
                         <p>We separate out from other providers because to our in-house graphic design team and
                             expertise of your clientele. Our designers have a proven track record of producing
                             finished products by adhering to product briefs and style manuals.
 
                         </p>
-                        <!-- <a class="kk" onclick="show()">Read more</a> -->
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4" style="display: flex;align-items: center;justify-content: center;"
@@ -423,22 +414,21 @@ background-size: auto; padding-bottom: 0;">
             <div class="row">
                 <div class="col-lg-4 col-md-4" style="display: flex;align-items: center;justify-content: center;"
                     data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine">
-                    <img src="../../assets/728e0c250ece9f7f19c42254d4f5add2-removebg-preview.png"
+                    <img src="../../assets/007c0a7558b5597ad357643755c39010-removebg-preview.png"
                         style="width: 70%;    margin-top: -40px;" alt="">
                 </div>
                 <div class="col-lg-8 col-md-8" data-aos="fade-left" data-aos-offset="200"
                     data-aos-easing="ease-in-sine">
                     <div class="colls">
-                        <h2>Shipping & Logistics:</h2>
-                        <p>Our logistics team streamlines the entire shipment procedure. We take care of all the
-                            boring administrative procedures and provide all the goods you require. Airfreight, air
-                            cargo, LCL, and FCL are among the services. Additionally, we offer a gate-to-gate
-                            service. (from the manufacturer to the location you choose)
+                        <h2>Digital Marketing</h2>
+                        <p>Digital marketing encompasses online strategies to promote brands, products, or services. It
+                            leverages channels like websites, social media, email, SEO, and paid advertising to engage
+                            audiences, increase visibility, and drive conversions.
                         </p>
-                        <!-- <a class="kk" onclick="show()">Read more</a> -->
                     </div>
                 </div>
             </div>
+            
             <div class="row">
 
                 <div class="col-lg-8 col-md-8" data-aos="fade-right" data-aos-offset="200"
@@ -449,13 +439,30 @@ background-size: auto; padding-bottom: 0;">
                             and offers a full end-to-end manufacturing solution, handling everything from concept
                             and design to sample and the production process.
                         </p>
-                        <!-- <a class="kk" onclick="show()">Read more</a> -->
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4" style="display: flex;align-items: center;justify-content: center;"
                     data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine">
                     <img src="../../assets/fdd0a8b5efab96dc24b0562f79bca6f6-removebg-preview (1).png"
-                        style="width: 120%;    margin-top: -40px;" alt="">
+                        style="width: 100%;    margin-top: -40px;" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4" style="display: flex;align-items: center;justify-content: center;"
+                    data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine">
+                    <img src="../../assets/728e0c250ece9f7f19c42254d4f5add2-removebg-preview.png"
+                        style="width: 70%;    margin-top: -40px;" alt="">
+                </div>
+                <div class="col-lg-8 col-md-8" data-aos="fade-left" data-aos-offset="200"
+                    data-aos-easing="ease-in-sine">
+                    <div class="colls">
+                        <h2>Shipping & Logistics</h2>
+                        <p>Our logistics team streamlines the entire shipment procedure. We take care of all the
+                            boring administrative procedures and provide all the goods you require. Airfreight, air
+                            cargo, LCL, and FCL are among the services. Additionally, we offer a gate-to-gate
+                            service. (from the manufacturer to the location you choose)
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -531,7 +538,8 @@ background-size: auto; padding-bottom: 0;">
                 <div class="col-lg-4 col-md-4 img-none"
                     style="display: flex;align-items: center;justify-content: center;" data-aos="fade-left"
                     data-aos-offset="200" data-aos-easing="ease-in-sine">
-                    <img src="../../assets/5b6a322da3c79d7368b661a07c5f95ac-removebg-preview.png" alt="" style="width: 90%;">
+                    <img src="../../assets/5b6a322da3c79d7368b661a07c5f95ac-removebg-preview.png" alt=""
+                        style="width: 90%;">
                 </div>
                 <div class="col-lg-8 col-md-8 pr-none" style="margin-top: 25px;" data-aos="fade-right"
                     data-aos-offset="200" data-aos-easing="ease-in-sine">
@@ -606,7 +614,6 @@ background-size: auto; padding-bottom: 0;">
                             if you wish to sell them through Amazon or another E-Commerce site.
 
                         </p>
-                        <!-- <a class="kk" onclick="show()">Read more</a> -->
                     </div>
                 </div>
             </div>
@@ -626,7 +633,6 @@ background-size: auto; padding-bottom: 0;">
                             products by adhering to product briefs and style manuals.
 
                         </p>
-                        <!-- <a class="kk" onclick="show()">Read more</a> -->
                     </div>
                 </div>
             </div>
@@ -647,7 +653,6 @@ background-size: auto; padding-bottom: 0;">
                             manufacturer to the location you choose)
 
                         </p>
-                        <!-- <a class="kk" onclick="show()">Read more</a> -->
                     </div>
                 </div>
             </div>
@@ -667,7 +672,25 @@ background-size: auto; padding-bottom: 0;">
                             to sample and the production process.
 
                         </p>
-                        <!-- <a class="kk" onclick="show()">Read more</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 img-none"
+                    style="display: flex;align-items: center;justify-content: center;" data-aos="fade-right"
+                    data-aos-offset="200" data-aos-easing="ease-in-sine">
+                    <img src="../../assets/007c0a7558b5597ad357643755c39010-removebg-preview.png"
+                        style="width: 90%;    margin-top: -40px;" alt="">
+                </div>
+                <div class="col-lg-8 col-md-8 pr-none" data-aos="fade-left" data-aos-offset="200"
+                    data-aos-easing="ease-in-sine">
+                    <div class="colls">
+                        <h2>Digital Marketing</h2>
+                        <p>Digital marketing encompasses online strategies to promote brands, products, or services. It
+                            leverages channels like websites, social media, email, SEO, and paid advertising to engage
+                            audiences, increase visibility, and drive conversions.
+
+                        </p>
                     </div>
                 </div>
             </div>
@@ -726,4 +749,3 @@ background-size: auto; padding-bottom: 0;">
         </div>
     </div>
 </section>
-

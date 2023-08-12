@@ -1,0 +1,21 @@
+<div class="main-login">
+    <div class="side">
+        <div class="im">
+            <img src="../../../assets/Group 1.png" alt="">
+        </div>
+        <h3>WELCOME</h3>
+        <p>Please Enter your Id and password to login into Kibriya Panel to view all the Kibriya statistics</p>
+        <form [formGroup]="loginform" style="width: 100%;" >
+            <div class="input-in">
+                <i class="fa fa-user"></i>
+                <input type="text" name="" placeholder="Enter Username" formControlName="username">
+            </div>
+            <div class="input-in">
+                <i class="fa fa-lock"></i>
+                <input type="text" name="" placeholder="Enter Password" formControlName="password">
+            </div>
+            <button (click)="getuser()" class="btu">Sign In <i class="fa fa-sign-in"></i> </button>
+        </form>
+    </div>
+
+</div>
