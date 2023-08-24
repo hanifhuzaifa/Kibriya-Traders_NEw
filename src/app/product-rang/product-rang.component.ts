@@ -54,13 +54,13 @@ export class ProductRangComponent implements OnInit {
 
   post(){
     const obj= this.qoute.value;
-    this.http.post("https://kibtradapi.somee.com/api/Controller/SaveQoute/obj",obj).subscribe((res:any)=>{
+    this.http.post("http://kibtradapi.somee.com/api/Controller/SaveQoute/obj",obj).subscribe((res:any)=>{
       alert("Your Qoute is Sent Successfully... We Will Get touch with you soon")
       this.qoute.reset();
     })
   }
   get(){
-    this.http.get("https://kibtradapi.somee.com/api/Controller/GetQoutes").subscribe((res:any)=>{
+    this.http.get("http://www.kibtradapi.somee.com/api/Controller/GetQoutes").subscribe((res:any)=>{
   
     })
   }

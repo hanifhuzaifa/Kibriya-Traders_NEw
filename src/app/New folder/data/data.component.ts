@@ -23,13 +23,13 @@ export class DataComponent implements OnInit{
   }
 
   getConatcts() {
-    this.Http.get("https://kibtradapi.somee.com/api/Controller/GetContacts").subscribe((res: any) => {
+    this.Http.get("http://www.kibtradapi.somee.com/api/Controller/GetContacts").subscribe((res: any) => {
       this.contactdata = res;
     })
   }
 
   getQoutes() {
-    this.Http.get("https://kibtradapi.somee.com/api/Controller/GetQoutes").subscribe((res: any) => {
+    this.Http.get("http://www.kibtradapi.somee.com/api/Controller/GetQoutes").subscribe((res: any) => {
       this.qoutesData = res;
     })
   }

@@ -70,7 +70,7 @@ Close() {
 
 post(){
   const obj= this.qoute.value;
-  this.http.post("https://kibtradapi.somee.com/api/Controller/SaveQoute/obj",obj).subscribe((res:any)=>{
+  this.http.post("http://www.kibtradapi.somee.com/api/Controller/SaveQoute/obj",obj).subscribe((res:any)=>{
     alert("Your Qoute is Sent Successfully... We Will Get touch with you soon")
     this.qoute.reset();
   })
@@ -81,6 +81,24 @@ get(){
   })
 }
 
+// comment= new FormGroup({
+//   name:new FormControl(""),
+//   cummint:new FormControl("")
+// })
+
+// postcomment(){
+//   // debugger
+//   const obj= this.comment.value;
+//   this.http.post("https://localhost:50755/api/Controller/savecummint/obj",obj).subscribe((res:any)=>{
+//     alert("Your comment is Sent Successfully...")
+//     this.comment.reset();
+//   })
+// }
+// getcomment(){
+//   this.http.get("https://localhost:44389/api/Controller/getcummint").subscribe((res:any)=>{
+
+//   })
+// }
 
 
 }
